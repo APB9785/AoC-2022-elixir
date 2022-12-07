@@ -31,28 +31,26 @@ defmodule Day07 do
 
   defp map_file_system(commands) do
     commands
-    |> Enum.reduce(%{pwd: []}, fn
-      ["$", "cd", ".."], acc ->
-        %{acc | pwd: Enum.drop(acc.pwd, -1)}
-
-      ["$", "cd", relative_dir], acc ->
-        new_pwd = acc.pwd ++ [relative_dir]
-
-        acc
-        |> put_in(new_pwd, %{})
-        |> Map.put(:pwd, new_pwd)
-
-      ["$", "ls"], acc ->
-        acc
-
-      ["dir", _], acc ->
-        acc
-
-      [size, name], acc ->
-        put_in(acc, acc.pwd ++ [name], String.to_integer(size))
-    end)
+    |> Enum.reduce(%{pwd: []}, &run_line/2)
     |> Map.delete(:pwd)
   end
+
+  defp run_line(["$", "cd", ".."], acc),
+    do: %{acc | pwd: Enum.drop(acc.pwd, -1)}
+
+  defp run_line(["$", "cd", relative_dir], acc) do
+    new_pwd = acc.pwd ++ [relative_dir]
+
+    acc
+    |> put_in(new_pwd, %{})
+    |> Map.put(:pwd, new_pwd)
+  end
+
+  defp run_line(["$", "ls"], acc), do: acc
+  defp run_line(["dir", _], acc), do: acc
+
+  defp run_line([size, name], acc),
+    do: put_in(acc, acc.pwd ++ [name], String.to_integer(size))
 
   defp list_directories_with_size(file_system) do
     file_system
@@ -75,22 +73,26 @@ defmodule Day07 do
   end
 
   defp calculate_size(path, sizes, file_system) do
-    case get_in(file_system, path) do
-      value when is_integer(value) ->
-        Map.put(sizes, path, {value, :file})
+    file_system
+    |> get_in(path)
+    |> record_size(sizes, path)
+  end
 
-      values when is_map(values) ->
-        total_size =
-          values
-          |> Map.keys()
-          |> Enum.map(fn key ->
-            {size, _type} = Map.get(sizes, path ++ [key])
-            size
-          end)
-          |> Enum.sum()
+  defp record_size(value, sizes, path) when is_integer(value) do
+    Map.put(sizes, path, {value, :file})
+  end
 
-        Map.put(sizes, path, {total_size, :folder})
-    end
+  defp record_size(values, sizes, path) when is_map(values) do
+    total_size =
+      values
+      |> Map.keys()
+      |> Enum.map(fn key ->
+        {size, _type} = Map.get(sizes, path ++ [key])
+        size
+      end)
+      |> Enum.sum()
+
+    Map.put(sizes, path, {total_size, :folder})
   end
 
   defp find_proper_delete_size(directories_sorted_by_size) do
