@@ -27,3 +27,5 @@ advent_2022-*.tar
 
 # Puzzle inputs
 /priv/
+
+.tool-versions
