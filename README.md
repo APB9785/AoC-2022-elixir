@@ -48,6 +48,10 @@ Simple 2-D physics simulation using MapSet for collision detection
 Part 1:  Graph simple functions in 2-D space, storing values in a MapSet  
 Part 2:  Use a [region quadtree](https://en.wikipedia.org/wiki/Quadtree) to analyze overlapping 2-D shapes
 
+### Day 16
+Part 1:  Transform an unweighted digraph into a [complete graph](https://en.wikipedia.org/wiki/Complete_graph) with edges weighted by distance and nodes weighted by value over time, in order to find an ideal path which maximizes node access value  
+Part 2:  Each path now traverses the graph twice, exponentially increasing the number of potential paths
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
