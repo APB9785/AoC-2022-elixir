@@ -52,6 +52,10 @@ Part 2:  Use a [region quadtree](https://en.wikipedia.org/wiki/Quadtree) to anal
 Part 1:  Transform an unweighted digraph into a [complete graph](https://en.wikipedia.org/wiki/Complete_graph) with edges weighted by distance and nodes weighted by value over time, in order to find an ideal path which maximizes node access value  
 Part 2:  Each path now traverses the graph twice, exponentially increasing the number of potential paths
 
+### Day 17
+Part 1:  2-D movement and collision detection for Tetris-like game  
+Part 2:  Cycle detection to allow simulating games of extremely long length
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
