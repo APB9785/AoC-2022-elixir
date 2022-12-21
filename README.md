@@ -56,6 +56,10 @@ Part 2:  Each path now traverses the graph twice, exponentially increasing the n
 Part 1:  2-D movement and collision detection for Tetris-like game  
 Part 2:  Cycle detection to allow simulating games of extremely long length
 
+### Day 18
+Part 1:  Compare points in 3-D space  
+Part 2:  Traversal of bounded space to scan a complex 3-D object for reachable surface area
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
