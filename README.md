@@ -60,23 +60,13 @@ Part 2:  Cycle detection to allow simulating games of extremely long length
 Part 1:  Compare points in 3-D space  
 Part 2:  Traversal of bounded space to scan a complex 3-D object for reachable surface area
 
+### Day 19
+TODO
+
 ### Day 20
 Part 1:  Index-based List operations on a medium-sized list of constant size  
 Part 2:  Handle extremely large indexes with modular arithmetic
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `advent_2022` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:advent_2022, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/advent_2022>.
+### Day 21
+Part 1:  Text-to-code conversion for basic arithmetic operations  
+Part 2:  [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) for [zero of a function](https://en.wikipedia.org/wiki/Zero_of_a_function)  
