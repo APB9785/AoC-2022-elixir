@@ -60,6 +60,10 @@ Part 2:  Cycle detection to allow simulating games of extremely long length
 Part 1:  Compare points in 3-D space  
 Part 2:  Traversal of bounded space to scan a complex 3-D object for reachable surface area
 
+### Day 20
+Part 1:  Index-based List operations on a medium-sized list of constant size  
+Part 2:  Handle extremely large indexes with modular arithmetic
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
