@@ -75,6 +75,10 @@ Part 2:  [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) 
 TODO  
 
 ### Day 23
-[Problem instructions](https://adventofcode.com/2022/day/23) incomplete - unique solution not possible as written 🙁
+[Problem instructions](https://adventofcode.com/2022/day/23) incomplete - unique solution not possible as written
 
+### Day 24
+TODO
 
+### Day 25
+Conversion to/from a base 5 number format where only digits 0, 1, 2 are used but each digit can be either negative or positive
