@@ -70,3 +70,11 @@ Part 2:  Handle extremely large indexes with modular arithmetic
 ### Day 21
 Part 1:  Text-to-code conversion for basic arithmetic operations  
 Part 2:  [Binary search](https://en.wikipedia.org/wiki/Binary_search_algorithm) for [zero of a function](https://en.wikipedia.org/wiki/Zero_of_a_function)  
+
+### Day 22
+TODO  
+
+### Day 23
+[Problem instructions](https://adventofcode.com/2022/day/23) incomplete - unique solution not possible as written 🙁
+
+
